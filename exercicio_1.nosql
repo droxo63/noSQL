@@ -1,0 +1,5 @@
+// Exercício 1 - Livros que não estão com status publicado e pageCount menor que 300
+db.biblioteca.find({
+  status: { $ne: "Publicado" },
+  pageCount: { $lt: 300 }
+})
