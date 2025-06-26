@@ -1,0 +1,7 @@
+// Exercício 1.4 - Livros que contém "JAVA" ou "Mobile" na longDescription (case insensitive)
+db.biblioteca.find({
+  $or: [
+    { longDescription: { $regex: "JAVA", $options: "i" } },
+    { longDescription: { $regex: "Mobile", $options: "i" } }
+  ]
+})
