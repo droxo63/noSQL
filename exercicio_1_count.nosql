@@ -1,0 +1,5 @@
+// Exercício 2 - Contagem
+db.biblioteca.find({
+  status: { $ne: "Publicado" },
+  pageCount: { $lt: 300 }
+}).count()
