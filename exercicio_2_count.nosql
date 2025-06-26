@@ -1,0 +1,7 @@
+// Exercício 2 - Contagem
+db.biblioteca.find({
+  $and: [
+    { title: { $regex: /MongoDB/i } },
+    { title: { $regex: /SQL Server/i } }
+  ]
+}).count()
