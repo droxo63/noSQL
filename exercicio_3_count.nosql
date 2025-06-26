@@ -1,0 +1,7 @@
+// Exercício 2.3 - Contagem
+db.biblioteca.find({
+  $or: [
+    { ISBN: { $regex: /^18/ } },
+    { isbn: { $regex: /^18/ } }
+  ]
+}).count()
