@@ -1,0 +1,7 @@
+// Exercício 4 - Contagem
+db.biblioteca.find({
+  $or: [
+    { longDescription: { $regex: "JAVA", $options: "i" } },
+    { longDescription: { $regex: "Mobile", $options: "i" } }
+  ]
+}).count()
